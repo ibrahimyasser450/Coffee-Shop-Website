@@ -1,0 +1,35 @@
+.link {
+  display: block; /* block */
+  position: relative;
+  border-radius: 0.5rem; /* rounded-lg */
+  margin: 0 -0.75rem; /* mx-3 */
+  padding: 0.5rem 0.75rem; /* py-2 px-3 */
+  font-size: 1rem; /* text-base */
+  line-height: 1.75; /* text-base/7 */
+  font-weight: 600; /* font-semibold */
+  color: #111827; /* text-gray-900 */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.link::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: rgb(202 138 4);
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: 0.5s;
+}
+
+.link:hover::after,
+.link.active::after {
+  width: 50% !important;
+}
+
+.link.active,
+.link:focus,
+.link:hover {
+  color: rgb(202 138 4);
+  background-color: #f9fafb; /* hover:bg-gray-50 */
+}
